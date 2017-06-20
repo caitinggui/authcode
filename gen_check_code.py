@@ -54,7 +54,7 @@ def gen_list():
 img_list = gen_list()
 def gen_captcha_text_and_image_new():
     img = choice(img_list)
-    captcha_image = Image.open(root_dir + "\\" + img + ".gif")
+    captcha_image = Image.open(os.path.join(root_dir, img + ".gif"))
     captcha_image = np.array(captcha_image)
     return img, captcha_image
 
